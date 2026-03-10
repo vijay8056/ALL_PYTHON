@@ -1,14 +1,9 @@
 from datetime import datetime
 
-print("Enter Number: ")
+def list_numbers(n):
+    for i in range(n):
+        print(i)
 
-x= int(input())
-print("value enetered:", x)
-y=0
-
-while x>y:
-    print (y)
-    y=y+1
 
 def calc_age(date_of_birth):
     birthdate = datetime.strptime(date_of_birth, "%Y-%m-%d")
@@ -18,7 +13,11 @@ def calc_age(date_of_birth):
 
 
 if '__main__' == __name__:
+    print("Enter a number: ")
+    n = int(input())
+    list_numbers(n)
+
     print("Enter your birthdate (YYYY-MM-DD): ")
     date_of_birth = input()
-    calc_age(date_of_birth);
+    calc_age(date_of_birth)
 
